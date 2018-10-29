@@ -1,0 +1,28 @@
+{
+  "name": "scanpdfdir",
+  "version": "1.0.0",
+  "description": "scans directoryfor pdf files and processess metadata",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha --reporter spec"
+  },
+  "keywords": [
+    "pdf",
+    "metadata"
+  ],
+  "author": "kwadwo amankwa",
+  "license": "ISC",
+  "dependencies": {
+    "file-type": "^10.0.0",
+    "jsonfile": "^5.0.0",
+    "pdf-image": "^2.0.0",
+    "pdf-parse": "^1.0.8",
+    "pdfinfo": "^0.0.3",
+    "read-chunk": "^3.0.0",
+    "walkdir": "^0.0.12"
+  },
+  "devDependencies": {
+    "chai": "^4.2.0",
+    "mocha": "^5.2.0"
+  }
+}

@@ -1,0 +1,141 @@
+yarn run v1.6.0
+$ mocha --reporter spec
+
+
+  #scandir
+    ✓ should scan directory properly
+
+
+  1 passing (9ms)
+
+found: /home/redbandit/Desktop/Projects/Wisdom/(Numen Book Series 102) Michael Stausberg-Zoroastrian Rituals in Context (Studies in the History of Religions)-Brill Academic Publishign (2004).pdf
+{ ext: 'pdf', mime: 'application/pdf' }
+found: /home/redbandit/Desktop/Projects/Wisdom/'docslide.net_nasir-i-khusraw-forty-poems-from-the-divanby-peter-lamborn-wilson-gholam.pdf'
+{ ext: 'pdf', mime: 'application/pdf' }
+found: /home/redbandit/Desktop/Projects/Wisdom/100398792-Iamblichus-de-Mysteriis.pdf
+{ ext: 'pdf', mime: 'application/pdf' }
+found: /home/redbandit/Desktop/Projects/Wisdom/113241531-Knowledge-paper-IX.pdf
+{ ext: 'pdf', mime: 'application/pdf' }
+found: /home/redbandit/Desktop/Projects/Wisdom/113241657-Knowledge-Paper-V.pdf
+{ ext: 'pdf', mime: 'application/pdf' }
+found: /home/redbandit/Desktop/Projects/Wisdom/116677607-Al-Quran-al-Karim-Interlinear-Translation.pdf
+{ ext: 'pdf', mime: 'application/pdf' }
+found: /home/redbandit/Desktop/Projects/Wisdom/126900246-Ibn-Arabi-Journey-to-the-Lord-of-Power.pdf
+{ ext: 'pdf', mime: 'application/pdf' }
+found: /home/redbandit/Desktop/Projects/Wisdom/128100089-Almond-Press-the-Forging-of-Israel-Iron-Technology-Symbolism-and-Tradition-in-Ancient-Society-1990.pdf
+{ ext: 'pdf', mime: 'application/pdf' }
+found: /home/redbandit/Desktop/Projects/Wisdom/129706033-The-Wisdom-of-Ancient-Cosmology-Contemporary-Science-in-Light-of-Tradition.pdf
+{ ext: 'pdf', mime: 'application/pdf' }
+found: /home/redbandit/Desktop/Projects/Wisdom/130133493-The-Golden-Chain-An-Anthology-of-Pythagorean-and-Platonic-Philosophy.pdf
+{ ext: 'pdf', mime: 'application/pdf' }
+found: /home/redbandit/Desktop/Projects/Wisdom/13535936-Swart-Jacobus-G-The-Book-of-Self-Creation-Introduction-Extracts-Bibliography.pdf
+{ ext: 'pdf', mime: 'application/pdf' }
+found: /home/redbandit/Desktop/Projects/Wisdom/141634408-Al-Jahiz-The-Glory-Superiority-of-Blacks-Over-Whites.pdf
+{ ext: 'pdf', mime: 'application/pdf' }
+found: /home/redbandit/Desktop/Projects/Wisdom/149252453-indotalismanic-Knowledge-Paper-1-1.pdf
+{ ext: 'pdf', mime: 'application/pdf' }
+found: /home/redbandit/Desktop/Projects/Wisdom/149274918-107168874-Edgar-Francis-2005-THESIS-Islamic-Symbols-and-Sufi-Rituals-for-Protection-and-Healing.pdf
+{ ext: 'pdf', mime: 'application/pdf' }
+found: /home/redbandit/Desktop/Projects/Wisdom/149414121-Knowledge-Paper-7-1.pdf
+{ ext: 'pdf', mime: 'application/pdf' }
+found: /home/redbandit/Desktop/Projects/Wisdom/157318874-Martin-Bernal-Black-Athena-Volume-1.pdf
+{ ext: 'pdf', mime: 'application/pdf' }
+found: /home/redbandit/Desktop/Projects/Wisdom/157562574-wazaif.pdf
+{ ext: 'pdf', mime: 'application/pdf' }
+found: /home/redbandit/Desktop/Projects/Wisdom/177348152-Indotalisman-Knowledge-Paper-12.pdf
+{ ext: 'pdf', mime: 'application/pdf' }
+found: /home/redbandit/Desktop/Projects/Wisdom/184681544-The-Economics-Book-DK-Publishing.pdf
+{ ext: 'pdf', mime: 'application/pdf' }
+found: /home/redbandit/Desktop/Projects/Wisdom/188722108-Nadim-Pabani-The-Qaim-and-Qiyama-Doctrines-in-the-Thought-of-Faṭimid-and-Alamut-Ismaʿilism-the-Evolution-of-a-Doctrine.pdf
+{ ext: 'pdf', mime: 'application/pdf' }
+found: /home/redbandit/Desktop/Projects/Wisdom/209562005-Plotino-Corrigan-Reading-Plotinus-a-Practical-Introduction-to-Neoplatonism-in-BB.pdf
+{ ext: 'pdf', mime: 'application/pdf' }
+found: /home/redbandit/Desktop/Projects/Wisdom/218360034-the-Picatrix-Liber-Rubeus-Edition-Greer-and-Warnock.pdf
+{ ext: 'pdf', mime: 'application/pdf' }
+found: /home/redbandit/Desktop/Projects/Wisdom/23013507-Islam-Al-Buni-Kitab-Shams-al-Ma-ari-Ashe-Steven-The-Qabalah-of-50-Gates.pdf
+{ ext: 'pdf', mime: 'application/pdf' }
+found: /home/redbandit/Desktop/Projects/Wisdom/231162546-IAMBLICHUS-Shaw-Gregory-Theurgy-and-the-Soul.pdf
+{ ext: 'pdf', mime: 'application/pdf' }
+found: /home/redbandit/Desktop/Projects/Wisdom/231162500-Iamblichus-and-the-Foundations-Platonism.pdf
+{ ext: 'pdf', mime: 'application/pdf' }
+found: /home/redbandit/Desktop/Projects/Wisdom/231162708-Iamblichus-the-Exhortation-to-Philosophy.pdf
+{ ext: 'pdf', mime: 'application/pdf' }
+found: /home/redbandit/Desktop/Projects/Wisdom/232204840-كتاب-جامع-الحكمتين-ناصر-خسرو-قباديانى.pdf
+{ ext: 'pdf', mime: 'application/pdf' }
+found: /home/redbandit/Desktop/Projects/Wisdom/240551353-The-Early-History-of-Heaven-2000.pdf
+{ ext: 'pdf', mime: 'application/pdf' }
+found: /home/redbandit/Desktop/Projects/Wisdom/243620812-Chaim-Vital-Ktavim-Chadashim-New-Writings-pdf.pdf
+{ ext: 'pdf', mime: 'application/pdf' }
+found: /home/redbandit/Desktop/Projects/Wisdom/248686757-The-Business-Book-Big-Ideas-Simply-Explained.pdf
+{ ext: 'pdf', mime: 'application/pdf' }
+found: /home/redbandit/Desktop/Projects/Wisdom/250313054-The-Birhatīya-Conjuration-Oath-and-the-meaning-of-its-first-28-names.pdf
+{ ext: 'pdf', mime: 'application/pdf' }
+found: /home/redbandit/Desktop/Projects/Wisdom/253119197-The-Science-Book.pdf
+{ ext: 'pdf', mime: 'application/pdf' }
+found: /home/redbandit/Desktop/Projects/Wisdom/253496415-Living-Theurgy-A-course-in-Iamblichus-Philosophy-Theology-Theurgy.pdf
+{ ext: 'pdf', mime: 'application/pdf' }
+found: /home/redbandit/Desktop/Projects/Wisdom/253695407-Picatrix-Liber-Atratus-1-and-2-Christopher-Warnock.pdf
+{ ext: 'pdf', mime: 'application/pdf' }
+found: /home/redbandit/Desktop/Projects/Wisdom/253695486-Picatrix-Liber-Atratus-3-and-4-Christopher-Warnock.pdf
+{ ext: 'pdf', mime: 'application/pdf' }
+found: /home/redbandit/Desktop/Projects/Wisdom/263848474-Enchanted-Chains.pdf
+{ ext: 'pdf', mime: 'application/pdf' }
+found: /home/redbandit/Desktop/Projects/Wisdom/26409311-Henry-Corbin-The-Ismaili-Response-to-the-Polemic-of-Ghazali.pdf
+{ ext: 'pdf', mime: 'application/pdf' }
+found: /home/redbandit/Desktop/Projects/Wisdom/273429563-BERNAYS-Et-Alli-Engineering-of-Consent-1955.pdf
+{ ext: 'pdf', mime: 'application/pdf' }
+found: /home/redbandit/Desktop/Projects/Wisdom/276710257-Divine-Names.pdf
+{ ext: 'pdf', mime: 'application/pdf' }
+found: /home/redbandit/Desktop/Projects/Wisdom/282478796-The-Thirteen-Petalled-Rose-Adin-Steinsaltz.pdf
+{ ext: 'pdf', mime: 'application/pdf' }
+found: /home/redbandit/Desktop/Projects/Wisdom/299145786-Kabbalah-Key-to-Your-Inner-Power-Prophet-Elizabeth-Clare.pdf
+{ ext: 'pdf', mime: 'application/pdf' }
+found: /home/redbandit/Desktop/Projects/Wisdom/322854652-The-History-Book-Big-Ideas-Simply-Explained.pdf
+{ ext: 'pdf', mime: 'application/pdf' }
+found: /home/redbandit/Desktop/Projects/Wisdom/325265512-Cpcxq-the-Literature-book-Big-ideas-simply-explained.pdf
+{ ext: 'pdf', mime: 'application/pdf' }
+found: /home/redbandit/Desktop/Projects/Wisdom/37114104-Marsilio-Ficino-Three-Books-on-Life.pdf
+{ ext: 'pdf', mime: 'application/pdf' }
+found: /home/redbandit/Desktop/Projects/Wisdom/39179352-كتاب-كنز-الولد.pdf
+{ ext: 'pdf', mime: 'application/pdf' }
+found: /home/redbandit/Desktop/Projects/Wisdom/44038595-The-Seals-of-Wisdom-Fusus-Hikam-Ibn-Arabi.pdf
+{ ext: 'pdf', mime: 'application/pdf' }
+found: /home/redbandit/Desktop/Projects/Wisdom/49137626-Iamblichus-on-the-Mysteries-of-the-Egyptians-Chaldeans-And-Assyrians.pdf
+{ ext: 'pdf', mime: 'application/pdf' }
+found: /home/redbandit/Desktop/Projects/Wisdom/51595650-Hizb-al-Wiqayah-Orison-of-Protection-Arabic-Text.pdf
+{ ext: 'pdf', mime: 'application/pdf' }
+found: /home/redbandit/Desktop/Projects/Wisdom/51595655-Hizb-al-Wiqayah-Orison-of-Protection-English-Translation.pdf
+{ ext: 'pdf', mime: 'application/pdf' }
+found: /home/redbandit/Desktop/Projects/Wisdom/88582010-MARSILIO-FICINO-His-Theology-His-Philosophy-His-Legacy-BRILL.pdf
+{ ext: 'pdf', mime: 'application/pdf' }
+found: /home/redbandit/Desktop/Projects/Wisdom/89367622-Jewish-Mysticism-and-Kabbalah.pdf
+{ ext: 'pdf', mime: 'application/pdf' }
+found: /home/redbandit/Desktop/Projects/Wisdom/91276810-Gregory-Shaw-Theurgy-and-the-Soul.pdf
+{ ext: 'pdf', mime: 'application/pdf' }
+found: /home/redbandit/Desktop/Projects/Wisdom/A Prayer for Spiritual Elevation and Protection IBN ARABI.pdf
+{ ext: 'pdf', mime: 'application/pdf' }
+found: /home/redbandit/Desktop/Projects/Wisdom/A Prayer for Spiritual Elevation and Protection IBN ARABI_hizbu_wiqaya.pdf
+{ ext: 'pdf', mime: 'application/pdf' }
+found: /home/redbandit/Desktop/Projects/Wisdom/A Short History of The Fatimid Khalifate_O'Leary.pdf
+{ ext: 'pdf', mime: 'application/pdf' }
+found: /home/redbandit/Desktop/Projects/Wisdom/A study of alRisalah albahirah.pdf
+{ ext: 'pdf', mime: 'application/pdf' }
+found: /home/redbandit/Desktop/Projects/Wisdom/A-Creed-of-the-Fatimids.pdf
+{ ext: 'pdf', mime: 'application/pdf' }
+found: /home/redbandit/Desktop/Projects/Wisdom/A160.shams-al-maref-alkobra.pdf
+{ ext: 'pdf', mime: 'application/pdf' }
+found: /home/redbandit/Desktop/Projects/Wisdom/AGuidetotheGoodLife_.mp3
+{ ext: 'mp3', mime: 'audio/mpeg' }
+found: /home/redbandit/Desktop/Projects/Wisdom/ANCIENT_PAGAN_AND_MODERN_CHRISTIAN_SYMBOLISM.pdf
+{ ext: 'pdf', mime: 'application/pdf' }
+found: /home/redbandit/Desktop/Projects/Wisdom/A_Very_short_Introduction_Plato.pdf
+{ ext: 'pdf', mime: 'application/pdf' }
+found: /home/redbandit/Desktop/Projects/Wisdom/Abd Rabbih Ibn The Unique Necklace Al-iqd Al-farid Great Books of Islamic Civilization - Volume II.pdf
+{ ext: 'pdf', mime: 'application/pdf' }
+found: /home/redbandit/Desktop/Projects/Wisdom/An Anthology of Ismaili Literature A Shii Vision of Islam.pdf
+{ ext: 'pdf', mime: 'application/pdf' }
+found: /home/redbandit/Desktop/Projects/Wisdom/An Anthology of Philosophy in Persia, Volume 2 Ismaili Thought in the Classical Age.pdf
+{ ext: 'pdf', mime: 'application/pdf' }
+found: /home/redbandit/Desktop/Projects/Wisdom/AncientEgyptTheLightOfTheWorld_GMassey.pdf
+{ ext: 'pdf', mime: 'application/pdf' }
+Done in 0.84s.
