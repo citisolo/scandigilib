@@ -6,6 +6,10 @@ assertion-error@^1.1.0:
   version "1.1.0"
   resolved "https://registry.yarnpkg.com/assertion-error/-/assertion-error-1.1.0.tgz#e60b6b0e8f301bd97e5375215bda406c85118c0b"
 
+asynquence@^0.10.2:
+  version "0.10.2"
+  resolved "https://registry.yarnpkg.com/asynquence/-/asynquence-0.10.2.tgz#ed214efa3c50fff67f5dcb97b8d75a00c1a9b50d"
+
 balanced-match@^1.0.0:
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/balanced-match/-/balanced-match-1.0.0.tgz#89b4d199ab2bee49de164ea02b89ce462d71b767"

@@ -13,6 +13,7 @@
   "author": "kwadwo amankwa",
   "license": "ISC",
   "dependencies": {
+    "asynquence": "^0.10.2",
     "file-type": "^10.0.0",
     "jsonfile": "^5.0.0",
     "pdf-image": "^2.0.0",
