@@ -12,7 +12,7 @@ describe('#scandir', () => {
   // })
 
   it('should scan directory without crashing', (done) => {
-    scanpdf.scanPDFdir("/home/redbandit/Desktop/Projects/Wisdom", "./tmp/")
+    scanpdf.scanPDFdir("/home/redbandit/Desktop/Projects/Wisdom", "/home/redbandit/src/projects/libManager/tinylibrarymanager/common/scanPDFdir/tmp/")
     done();
   })
 

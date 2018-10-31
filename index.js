@@ -7,7 +7,8 @@ const PDF = require('pdfinfo');
 const Path = require('path');
 const PDFImage = require('pdf-image').PDFImage;
 const jsonfile = require('jsonfile');
-const ASQ = require("asynquence");
+const util = require('util');
+//const ASQ = require("asynquence");
 //const buffer = readChunk.sync('unicorn.png', 0, 4100);
 
 var NUMFILES = 0;
@@ -111,6 +112,30 @@ function processPDF (filepath, outdir){
 }
 
 
+function aysnc walkdir(dir, outdir, func){
+  let filesToScan = [];
+  const walkDir = util.promisify(walk);
+  let walkDirPromise = walkDir(dir)
+    .then(function(filepath, stat){
+      if(!fs.lstatSync(filepath).isDirectory()){
+        const fileTypeInfo = fileType(readChunk.sync(filepath, 0, 4100));
+        //console.log("found: %s", filepath)
+        //console.log(fileType(buffer))
+        if (fileTypeInfo != null && fileTypeInfo.ext === "pdf"){
+          filesToScan.push(filepath);
+          //processPDF(filepath, outdir);
+        }
+        // if (fileTypeInfo != null && fileTypeInfo.ext === "png"){
+        //   fs.unlink(filepath , function (err) {
+        //     if (err) throw err;
+        //     console.log('%s: Deletion sucessful.', filepath);
+        //   });
+        // }
+      }
+    });
+
+}
+
 function scanPDFdir(dir, outdir, func) {
     var filesToScan = [];
     if (!fs.existsSync(dir) || !fs.existsSync(outdir)) {
@@ -169,6 +194,7 @@ function scanPDFdir(dir, outdir, func) {
       .then(function(files){
         console.log("CREATING FILE THUMBNAILS...");
          res = files.map(function(data){
+           console.log(data.path);
            let filepath = data.path
            var pdfImage = new PDFImage(filepath);
            return pdfImage.convertPage(0)
