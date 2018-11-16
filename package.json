@@ -4,7 +4,8 @@
   "description": "Generates thumbnails and metadata database for digital library",
   "main": "index.js",
   "scripts": {
-    "test": "mocha --reporter spec"
+    "test": "mocha --reporter spec",
+    "cover": "node_modules/istanbul/lib/cli.js cover node_modules/mocha/bin/_mocha -- -R spec test/*"
   },
   "keywords": [
     "pdf",
@@ -16,6 +17,8 @@
   "author": "kwadwo amankwa",
   "license": "ISC",
   "dependencies": {
+    "coveralls": "^3.0.2",
+    "istanbul": "^0.4.5",
     "lokijs": "^1.5.5",
     "pdf-image": "^2.0.0",
     "pdfinfo": "^0.0.3",
@@ -25,9 +28,7 @@
     "chai": "^4.2.0",
     "mocha": "^5.2.0"
   },
-
   "engines": {
     "node": ">=7.1.0"
   }
-
 }

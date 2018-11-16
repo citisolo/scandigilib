@@ -1,4 +1,4 @@
-# scandigilib
+# scandigilib[![Build Status](https://travis-ci.org/citisolo/scandigilib.svg?branch=master)](https://travis-ci.org/citisolo/scandigilib)
 
 > A library that generates thumbnails and metadata database for a digital library
 
