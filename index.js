@@ -87,143 +87,79 @@ const metaDataEmitter = new DataEmitter();
 //
 // }
 
+metaThumbnailEmitter.on('jobFinished', function(metadata) {
+	console.log("WRITING DATABASE...");
+	books.insert(metadata);
+	db.saveDatabase();
+});
+
+metaThumbnailEmitter.on('imageMade', function(metadata, outdir) {
+	let newImagePath = createNewPath(metadata.imagePath, outdir);
+	fs.rename(metadata.imagePath, newImagePath, function(err) {
+		if (err != null) {
+			console.log(err);
+		}
+		console.log('write successful: %s', newImagePath);
+		metadata = Object.assign(metadata, {
+			imagePath: newImagePath
+		});
+		//metadata.imagePath = newImagePath;
+		metaThumbnailEmitter.emit('jobFinished', metadata);
+	});
+});
+
+metaThumbnailEmitter.on('input', function(metadata, outdir) {
+	let filepath = metadata.path;
+	var pdfImage = new PDFImage(filepath);
+	pdfImage.convertPage(0)
+		.then(function(imagePath) {
+			//metadata.imagePath = imagePath
+			metadata = Object.assign(metadata, {
+				imagePath: imagePath
+			});
+			metaThumbnailEmitter.emit('imageMade', metadata, outdir);
+		})
+		.catch(function(err) {
+			console.log(filepath);
+			console.log(err);
+		});
+});
+
+metaDataEmitter.on('jobFinished', function(metadata, outdir) {
+	//console.log(metadata);
+	metaThumbnailEmitter.emit('input', metadata, outdir);
+});
+
+metaDataEmitter.on('input', function(file, outdir) {
+	var pdf = PDF(file);
+	pdf.info(function(err, metadata) {
+		//console.log(file);
+		if (err) {
+			//FIXME: handle this better
+			console.log(file);
+			console.log(err);
+			return;
+		}
+		//meta.path = file;
+		metadata = Object.assign(metadata, {
+			path: file
+		});
+		metaDataEmitter.emit('jobFinished', metadata, outdir);
+
+	});
+
+});
+
 function scanFile(filepath, outdir) {
-
-	metaThumbnailEmitter.on('jobFinished', function(metadata) {
-		console.log("WRITING DATABASE...");
-		books.insert(metadata);
-		db.saveDatabase();
-	});
-
-	metaThumbnailEmitter.on('imageMade', function(metadata) {
-		let newImagePath = createNewPath(metadata.imagePath, outdir);
-		fs.rename(metadata.imagePath, newImagePath, function(err) {
-			if (err != null) {
-				console.log(err);
-			}
-			console.log('write successful: %s', newImagePath);
-			metadata = Object.assign(metadata, {
-				imagePath: newImagePath
-			});
-			//metadata.imagePath = newImagePath;
-			metaThumbnailEmitter.emit('jobFinished', metadata);
-		});
-	});
-
-	metaThumbnailEmitter.on('input', function(metadata) {
-		let filepath = metadata.path;
-		var pdfImage = new PDFImage(filepath);
-		pdfImage.convertPage(0)
-			.then(function(imagePath) {
-				//metadata.imagePath = imagePath
-				metadata = Object.assign(metadata, {
-					imagePath: imagePath
-				});
-				metaThumbnailEmitter.emit('imageMade', metadata);
-			})
-			.catch(function(err) {
-				console.log(filepath);
-				console.log(err);
-			});
-	});
-
-	metaDataEmitter.on('jobFinished', function(metadata) {
-		//console.log(metadata);
-		metaThumbnailEmitter.emit('input', metadata);
-	});
-
-	metaDataEmitter.on('input', function(file) {
-		var pdf = PDF(file);
-		pdf.info(function(err, metadata) {
-			//console.log(file);
-			if (err) {
-				//FIXME: handle this better
-				console.log(file);
-				console.log(err);
-				return;
-			}
-			//meta.path = file;
-			metadata = Object.assign(metadata, {
-				path: file
-			});
-			metaDataEmitter.emit('jobFinished', metadata);
-
-		});
-
-	});
-
 	if (!fs.lstatSync(filepath).isDirectory()) {
 		let ext = Path.extname(filepath);
 		if (ext === ".pdf") {
-			metaDataEmitter.emit('input', filepath);
+			metaDataEmitter.emit('input', filepath, outdir);
 		}
 	}
 }
 
 function walkdir(dir, outdir) {
-
-	metaThumbnailEmitter.on('jobFinished', function(metadata) {
-		console.log("WRITING DATABASE...");
-		books.insert(metadata);
-		db.saveDatabase();
-	});
-
-	metaThumbnailEmitter.on('imageMade', function(metadata) {
-		let newImagePath = createNewPath(metadata.imagePath, outdir);
-		fs.rename(metadata.imagePath, newImagePath, function(err) {
-			if (err != null) {
-				console.log(err);
-			}
-			console.log('write successful: %s', newImagePath);
-			metadata = Object.assign(metadata, {
-				imagePath: newImagePath
-			});
-			//metadata.imagePath = newImagePath;
-			metaThumbnailEmitter.emit('jobFinished', metadata);
-		});
-	});
-
-	metaThumbnailEmitter.on('input', function(metadata) {
-		let filepath = metadata.path;
-		var pdfImage = new PDFImage(filepath);
-		pdfImage.convertPage(0)
-			.then(function(imagePath) {
-				//metadata.imagePath = imagePath
-				metadata = Object.assign(metadata, {
-					imagePath: imagePath
-				});
-				metaThumbnailEmitter.emit('imageMade', metadata);
-			})
-			.catch(function(err) {
-				console.log(filepath);
-				console.log(err);
-			});
-	});
-
-	metaDataEmitter.on('jobFinished', function(metadata) {
-		//console.log(metadata);
-		metaThumbnailEmitter.emit('input', metadata);
-	});
-
-	metaDataEmitter.on('input', function(file) {
-		var pdf = PDF(file);
-		pdf.info(function(err, metadata) {
-			//console.log(file);
-			if (err) {
-				//FIXME: handle this better
-				console.log(file);
-				console.log(err);
-				return;
-			}
-			//meta.path = file;
-			metadata = Object.assign(metadata, {
-				path: file
-			});
-			metaDataEmitter.emit('jobFinished', metadata);
-
-		});
-
-	});
 
 	var walkEmitter = walk(dir);
 
@@ -231,7 +167,7 @@ function walkdir(dir, outdir) {
 		if (!fs.lstatSync(filepath).isDirectory()) {
 			let ext = Path.extname(filepath);
 			if (ext === ".pdf") {
-				metaDataEmitter.emit('input', filepath);
+				scanFile(filepath, outdir);
 			}
 		}
 	})
