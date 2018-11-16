@@ -1,4 +1,6 @@
-# scandigilib[![Build Status](https://travis-ci.org/citisolo/scandigilib.svg?branch=master)](https://travis-ci.org/citisolo/scandigilib)
+# scandigilib [![Build Status](https://travis-ci.org/citisolo/scandigilib.svg?branch=master)](https://travis-ci.org/citisolo/scandigilib)  
+> [![Coverage Status](https://coveralls.io/repos/github/citisolo/scandigilib/badge.svg?branch=master)](https://coveralls.io/github/citisolo/scandigilib?branch=master)
+
 
 > A library that generates thumbnails and metadata database for a digital library
 
