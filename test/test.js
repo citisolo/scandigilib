@@ -2,7 +2,16 @@
 
 var expect = require('chai').expect;
 const assert = require('chai').assert;
-var scanpdf = require('../index');
+const scanpdf = require('../index');
+const fs = require('fs');
+
+//Create the tmp directory.
+var dir = './test/tmp';
+
+if (!fs.existsSync(dir)){
+    fs.mkdirSync(dir);
+}
+
 
 describe('#scandir', () => {
   // it('should throw error on incorrect input', (done) => {
@@ -11,10 +20,10 @@ describe('#scandir', () => {
   //   done();
   // })
 
-  // it('should scan directory without crashing', (done) => {
-  //   scanpdf.scanPDFdir("./test/librarydata/100MB", "./test/tmp/")
-  //   done();
-  // }).timeout(1000000);
+  it('should scan directory without crashing', (done) => {
+    scanpdf.scanPDFdir("./test/librarydata/100MB", "./test/tmp/")
+    done();
+  }).timeout(1000000);
 
   // it('should scan directory without crashing', (done) => {
   //   scanpdf.scanPDFdir("./test/librarydata/librarydata/1GB", "./test/tmp/")
@@ -26,10 +35,10 @@ describe('#scandir', () => {
   //   done();
   // }).timeout(1000000)
   //
-  it('should scan directory without crashing', (done) => {
-    scanpdf.scanPDFdir("./test/librarydata/10GB", "./test/tmp/")
-    done();
-  }).timeout(1000000)
+  // it('should scan directory without crashing', (done) => {
+  //   scanpdf.scanPDFdir("./test/librarydata/10GB", "./test/tmp/")
+  //   done();
+  // }).timeout(1000000)
 
 })
 
