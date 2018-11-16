@@ -45,7 +45,7 @@ describe('#scandir', () => {
 describe('#scanfile', () => {
 
   it('should scan file without crashing', (done) => {
-    scanpdf.scanPDF("./test/librarydata/1GB/6 Keys to Mastery.pdf", "./test/tmp/");
+    scanpdf.scanPDF("./test/librarydata/100MB/01_kingsley.pdf", "./test/tmp/");
     done();
   }).timeout(1000000);
 })
