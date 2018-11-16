@@ -1,29 +1,32 @@
 {
-  "name": "scanpdfdir",
+  "name": "scandigilib",
   "version": "1.0.0",
-  "description": "scans directoryfor pdf files and processess metadata",
+  "description": "Generates thumbnails and metadata database for digital library",
   "main": "index.js",
   "scripts": {
     "test": "mocha --reporter spec"
   },
   "keywords": [
     "pdf",
-    "metadata"
+    "metadata",
+    "digital",
+    "library",
+    "database"
   ],
   "author": "kwadwo amankwa",
   "license": "ISC",
   "dependencies": {
-    "asynquence": "^0.10.2",
-    "file-type": "^10.0.0",
-    "jsonfile": "^5.0.0",
+    "lokijs": "^1.5.5",
     "pdf-image": "^2.0.0",
-    "pdf-parse": "^1.0.8",
     "pdfinfo": "^0.0.3",
-    "read-chunk": "^3.0.0",
     "walkdir": "^0.0.12"
   },
   "devDependencies": {
     "chai": "^4.2.0",
     "mocha": "^5.2.0"
-  }
+  },
+  "engines": {
+    "node": ">=7.1.0"
+  },
+
 }
