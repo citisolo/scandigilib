@@ -1,6 +1,6 @@
 # scandigilib
 
-> Generates thumbnails and metadata database for a digital library
+> A library that generates thumbnails and metadata database for a digital library
 
 ## Install
 
