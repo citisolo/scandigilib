@@ -9,7 +9,7 @@
 Install with [npm](https://www.npmjs.com/)
 
 ```sh
-$ npm i scandigilib --save-dev
+$ npm i scandigilib
 ```
 
 ## Usage
