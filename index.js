@@ -26,7 +26,8 @@ function databaseInitialize() {
 function createNewPath(oldPath, prefix) {
 
 	let newPath = Path.basename(oldPath);
-	newPath = prefix + newPath;
+
+	newPath = Path.join(prefix, newPath);
 
 	return newPath;
 }
@@ -207,7 +208,7 @@ function scanEPUBdir() {
 
 }
 
-function scanPDFdir(dir, outdir, func) {
+function scanPDFdir(dir, outdir) {
 	if (!fs.existsSync(dir) || !fs.existsSync(outdir)) {
 		throw new Error("<dir> and <outdir> must be defined");
 	}

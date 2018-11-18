@@ -21,9 +21,24 @@ describe('#scandir', () => {
   // })
 
   it('should scan directory without crashing', (done) => {
-    scanpdf.scanPDFdir("./test/librarydata/100MB", "./test/tmp/")
+    scanpdf.scanPDFdir("./test/librarydata/100MB", "./test/tmp/");
     done();
   }).timeout(1000000);
+
+  // it('should save to correct directory without adding trailing slash to [outdir]', (done) => {
+  //
+  //   empty('./test/tmp', false, (res) => {
+  //     if(res.error){
+  //       done();
+  //     }
+  //     else{
+  //       scanpdf.scanPDFdir("./test/librarydata/100MB", "./test/tmp");
+  //
+  //     }
+  //
+  //   })
+  //   done();
+  // }).timeout(1000000);
 
   // it('should scan directory without crashing', (done) => {
   //   scanpdf.scanPDFdir("./test/librarydata/librarydata/1GB", "./test/tmp/")
