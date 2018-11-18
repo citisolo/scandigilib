@@ -1,6 +1,6 @@
 {
   "name": "scandigilib",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Generates thumbnails and metadata database for digital library",
   "main": "index.js",
   "scripts": {
