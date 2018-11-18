@@ -11,6 +11,7 @@ Install with [npm](https://www.npmjs.com/)
 ```sh
 $ npm i scandigilib
 ```
+Depends on the pdf-image library so ensure you have convert, gs, and pdfinfo (part of poppler) commands. see [pdf-image](https://www.npmjs.com/package/pdf-image#ubuntu) for installation instructions.
 
 ## Usage
 
