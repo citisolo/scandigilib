@@ -19,6 +19,7 @@
   "dependencies": {
     "coveralls": "^3.0.2",
     "empty-folder": "^2.0.3",
+    "epub": "^1.1.0",
     "istanbul": "^0.4.5",
     "lokijs": "^1.5.5",
     "pdf-image": "^2.0.0",

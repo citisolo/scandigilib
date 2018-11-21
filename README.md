@@ -49,7 +49,7 @@ $ npm i -d && npm test
 
 ## Contributing
 
-Pull requests and stars are always welcome. For bugs and feature requests, [please create an issue](#please create an issue)
+Pull requests and stars are always welcome. For bugs and feature requests, [please create an issue](https://github.com/citisolo/scandigilib/issues/new)
 
 ## Author
 
