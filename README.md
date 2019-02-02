@@ -13,6 +13,29 @@ $ npm i scandigilib
 ```
 Depends on the pdf-image library so ensure you have convert, gs, and pdfinfo (part of poppler) commands. see [pdf-image](https://www.npmjs.com/package/pdf-image#ubuntu) for installation instructions.
 
+Note: if you are getting the error 'convert-im6.q16: not authorized ... ; try the following fix:
+
+For the file /etc/ImageMagick-6/policy.xml (or /etc/ImageMagick/policy.xml) make the following changes:
+```
+    comment line
+
+    <!-- <policy domain="coder" rights="none" pattern="MVG" /> -->
+
+    change line
+
+    <policy domain="coder" rights="none" pattern="PDF" />
+
+    to
+
+    <policy domain="coder" rights="read|write" pattern="PDF" />
+
+    add line
+
+    <policy domain="coder" rights="read|write" pattern="LABEL" />
+```
+for more details see this fix on [Stackoverflow](https://stackoverflow.com/questions/42928765/convertnot-authorized-aaaa-error-constitute-c-readimage-453)
+
+
 ## Usage
 
 ### Scanning a whole directory.
